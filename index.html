@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+<script src="js/lib/aframe.min.js"></script>
+<script src="js/lib/aframe-ar.js"></script>
+<script src="js/lib/aframe-extras.loaders.min.js"></script>
+<script src="js/lib/inflate.min.js"></script>
+<script>
+THREEx.ArToolkitContext.baseURL = "https://vianch.github.io/building-4d/";
+</script>
+<style>
+.a-enter-vr-button {
+  display: none;
+}
+</style>
+<body style='margin : 0px; overflow: hidden;'>
+  <a-scene arjs="debugUIEnabled: false;">
+      <!-- handle marker with your own pattern -->
+      <a-marker type='pattern' url='data/pattern-4d.patt'>
+          <a-entity
+                  scale="0.018 0.018 0.018"
+                  rotation="0 0 0"
+                  fbx-model="src: url(assets/FACHADA_008.FBX);"
+                  animation-mixer="loop: repeat">
+          </a-entity>
+      </a-marker>
+  
+  
+      <!-- add a simple camera -->
+      <a-entity camera></a-entity>
+  </a-scene>
+  </body>
+</html>
